@@ -12,5 +12,9 @@ Template.contactsShow.events({
   'click [data-action=fake]': function (event, template) {
     event.preventDefault();
     alert('Gotcha!');
+  },
+  'click [data-action=inactive]': function (event, template) {
+    console.log('inactivation, go!!')
+    // this.details.
   }
 });

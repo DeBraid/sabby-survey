@@ -1,5 +1,5 @@
-STATES = [
-  'AK', 'AL', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
+PROVINCES = [
+  "ON", "QC", "BC", "AB", "MB", "SK", "NS", "NB", "NL", "PE", "NT", "YT", "NU"
 ];
 
 Contacts = new Mongo.Collection('contacts');
@@ -13,6 +13,15 @@ Contacts.before.insert(function (userId, doc) {
 Contacts.attachSchema(new SimpleSchema({
   name: {
     type: Object
+  },
+  'name.title': {
+    type: String,
+    label: 'Issue',
+    autoform: {
+      'label-type': 'floating',
+      placeholder: 'Title'
+    },
+    max: 40
   },
   'name.first': {
     type: String,
@@ -74,10 +83,10 @@ Contacts.attachSchema(new SimpleSchema({
     type: String,
     max: 200
   },
-  'location.state': {
+  'location.province': {
     type: String,
     autoform: {
-      options: _.map(STATES, function (state) {
+      options: _.map(PROVINCES, function (state) {
         return {label: state, value: state};
       })
     }

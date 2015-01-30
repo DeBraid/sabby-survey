@@ -18,14 +18,16 @@
 
           <div class="item item-avatar">
             <img src="{{avatarUrl}}">
+            <h2>Issue: {{name.title}}</h2>
             <h2>{{name.first}} {{name.last}}</h2>
-            <p>{{location.city}}, {{location.state}}</p>
+            <p>{{location.city}}, {{location.province}}</p>
+            <p>{{name.createdAt}}</p>
           </div>
 
           <div class="item item-body">
             {{{activeLabel}}}
 
-            <h4>Notes</h4>
+            <h4>Additional Notes...</h4>
             <p>
               {{details.notes}}
             </p>

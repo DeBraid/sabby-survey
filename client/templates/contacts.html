@@ -1,6 +1,6 @@
 <template name="contacts">
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Contacts</h1>
+    <h1 class="title">Reports</h1>
   {{/contentFor}}
 
   {{#contentFor "headerButtonRight"}}
@@ -13,7 +13,8 @@
         {{#each contacts}}
           {{#ionItem path="contacts.show" buttonRight=true avatar=true class="item-icon-right"}}
             <img src="{{avatarUrl}}">
-            {{name.first}} {{name.last}}
+            <h2>{{name.title}}</h2>
+            <p>created by: {{name.first}} {{name.last}}</p>
             {{> ionIcon icon="ios-arrow-forward" class="positive"}}
           {{/ionItem}}
         {{/each}}

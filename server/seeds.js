@@ -1,7 +1,7 @@
 Meteor.startup(function () {
 
   if (Contacts.find({}).count() === 0) {
-    _(20).times(function(n) {
+    _(2).times(function(n) {
       var user = Fake.user();
 
       Contacts.insert({
@@ -13,7 +13,7 @@ Meteor.startup(function () {
         priority: Fake.fromArray(['High', 'Medium', 'Low']),
         location: {
           city: Fake.word(),
-          state: Fake.fromArray(STATES)
+          province: Fake.fromArray(PROVINCES)
         },
         details: {
           notes: Fake.paragraph(),

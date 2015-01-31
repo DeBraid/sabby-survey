@@ -64,14 +64,25 @@ Contacts.attachSchema(new SimpleSchema({
       ]
     }
   },
+  maintenance: {
+    type: String,
+    optional: true,
+    autoform: {
+      options: [
+        {value: 'Line', label: 'Line' },
+        {value: 'Base', label: 'Basic' }
+      ],
+      type: 'select-radio'
+    }
+  },
   priority: {
     type: String,
     optional: true,
     autoform: {
       options: [
-        {value: 'High', label: 'High'},
-        {value: 'Medium', label: 'Medium'},
-        {value: 'Low', label: 'Low'}
+        {value: 'High', label: 'High' , color : 'red'},
+        {value: 'Medium', label: 'Medium' , color : 'orange'},
+        {value: 'Low', label: 'Low' , color : 'yellow'}
       ],
       type: 'select-radio'
     }

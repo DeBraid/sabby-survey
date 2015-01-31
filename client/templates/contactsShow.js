@@ -1,4 +1,4 @@
-Template.contactsShow.helpers({
+contactTemplate.contactsShow.helpers({
   activeLabel: function () {
     if (this.details.active) {
       return '<i class="ion-checkmark-circled"></i> Active';
@@ -12,9 +12,10 @@ Template.contactsShow.events({
   'click [data-action=fake]': function (event, template) {
     event.preventDefault();
     alert('Gotcha!');
-  },
-  'click [data-action=inactive]': function (event, template) {
-    console.log('inactivation, go!!')
-    // this.details.
   }
+  // ,
+  // 'click [data-action=isActive]': function (event, template) {
+  //   console.log('inactivation, go!!')
+  //   // this.details.
+  // }
 });

@@ -124,5 +124,15 @@ Contacts.attachSchema(new SimpleSchema({
   avatarUrl: {
     type: String,
     optional: true
+  },
+  createdAt: {
+    type: Date,
+    autoValue: function () {
+      if (this.isInsert) {
+        return new Date();
+      } else {
+        this.unset();
+      }
+    }
   }
 }));

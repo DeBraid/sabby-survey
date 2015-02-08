@@ -1,4 +1,6 @@
 <template name="photobutton">
-  <h1>photo button</h1>
-  <button data-action="photo">take a photo</button>
+  <div data-action="photo">
+    <button>take a photo</button>
+    {{> ionIcon icon="android-camera" data-action="photo"}}
+  </div>
 </template>

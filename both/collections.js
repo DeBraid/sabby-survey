@@ -1,3 +1,5 @@
+Photos = new Mongo.Collection('photos');
+
 PROVINCES = [
   "ON", "QC", "BC", "AB", "MB", "SK", "NS", "NB", "NL", "PE", "NT", "YT", "NU"
 ];

@@ -3,6 +3,7 @@ Router.configure({
 });
 
 Router.map(function() {
+
   this.route('contacts', {
     path: '/',
     data: function () {
@@ -20,4 +21,14 @@ Router.map(function() {
       };
     }
   });
+
+  this.route('contacts.create', {
+    path: '/contacts/create',
+    data: function () {
+      return {
+        // contact: Contacts.findOne({_id: this.params._id})
+      };
+    }
+  });
+  
 });

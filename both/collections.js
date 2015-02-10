@@ -43,6 +43,18 @@ Contacts.attachSchema(new SimpleSchema({
     },
     max: 200
   },
+  /* 
+  Need to implement photos as part of autoform
+  -- ionic role?
+
+  */
+
+  photos : {
+    type: [Object]
+  },
+  'photos.$.src': {
+    type: String
+  },
   emails: {
     type: [Object]
   },

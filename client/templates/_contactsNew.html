@@ -4,3 +4,26 @@
     {{> quickForm collection="Contacts" id="contacts-new-form" type="insert" omitFields="avatarUrl,details.active" buttonContent="Create Report"}}
   {{/ionModal}}
 </template>
+
+<template name="contactsCreate">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="contacts" text="Reports"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Create Report</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-modal="_contactsEdit" data-id="{{contact._id}}">Create</button>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding" }}
+    <h1>foobar</h1>
+        {{> photobutton }}
+        {{> quickForm collection="Contacts" id="contacts-new-form" type="insert" omitFields="avatarUrl,details.active" buttonContent="Create Report"}}
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>

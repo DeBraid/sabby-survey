@@ -1,14 +1,17 @@
 <template name="photobutton">
-  <div style="font-size:4em" data-action="photo">
+  <div data-action="photo">
     {{> ionIcon icon="android-camera" data-action="photo"}}
+    Add Photos 
   </div>
-  {{> photos }}
 </template>
 
 <template name="photos">
   <div class="col-sm-3">
     {{#each photos }}
-      <img style="width:100px" src="{{ src }}" class="report-photos img-responsive" alt="">
+    {{#if src }}
+      <img style="width:130px" src="{{ src }}" class="report-photos img-responsive" alt="">
+    
+    {{/if}}
     {{/each}}
   </div>
 </template>
